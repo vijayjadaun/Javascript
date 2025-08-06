@@ -1,24 +1,5 @@
 # JavaScript Execution Context & Call Stack
 
-## 📝 Description
-
-This document covers the fundamental concepts of JavaScript's Execution Context and Call Stack - essential building blocks for understanding how JavaScript code executes behind the scenes. 
-
-**What you'll learn:**
-- The technical definition and structure of Execution Contexts
-- How JavaScript manages function calls using the Call Stack
-- The two phases of code execution: Memory Creation and Code Execution
-- Step-by-step breakdowns of real code examples
-- Practice exercises to solidify your understanding
-
-**Prerequisites:** Basic JavaScript syntax and functions
-
-**Difficulty Level:** Beginner to Intermediate
-
-**Estimated Reading Time:** 10-15 minutes
-
----
-
 ## 🧠 Theory: Execution Context (EC)
 
 An **Execution Context** is the environment where JavaScript code runs. Every time a function runs, a new execution context is created.
