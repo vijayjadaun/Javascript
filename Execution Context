@@ -1,5 +1,24 @@
 # JavaScript Execution Context & Call Stack
 
+## 📝 Description
+
+This document covers the fundamental concepts of JavaScript's Execution Context and Call Stack - essential building blocks for understanding how JavaScript code executes behind the scenes. 
+
+**What you'll learn:**
+- The technical definition and structure of Execution Contexts
+- How JavaScript manages function calls using the Call Stack
+- The two phases of code execution: Memory Creation and Code Execution
+- Step-by-step breakdowns of real code examples
+- Practice exercises to solidify your understanding
+
+**Prerequisites:** Basic JavaScript syntax and functions
+
+**Difficulty Level:** Beginner to Intermediate
+
+**Estimated Reading Time:** 10-15 minutes
+
+---
+
 ## 🧠 Theory: Execution Context (EC)
 
 An **Execution Context** is the environment where JavaScript code runs. Every time a function runs, a new execution context is created.
@@ -14,24 +33,24 @@ An **Execution Context** is the environment where JavaScript code runs. Every ti
 
 Think of Execution Context as a "box" of data structures created whenever JavaScript starts running code — either globally or in a function.
 
-📦 **Internally, an EC consists of:**
+**Internally, an EC consists of:**
 
 1. **Memory/Variable Environment (Creation Phase)**:
    - All variables, functions, and arguments are stored here
-   - Functions are stored fully; variables are stored with `undefined` (if `var`)
+   - Functions are stored fully; variables are stored with undefined (if var)
 
 2. **Code Execution Phase**: 
    - Executes line-by-line
    - Assigns actual values to variables, runs functions
 
 3. **this Binding**:
-   - In global context: `this` → `window` (or `global` in Node)
+   - In global context: this → window (or global in Node)
    - In function: depends on how the function is called
 
 ### Each EC has:
 - **Variable Environment (VE)**: memory allocated to variables/functions
 - **Scope Chain**: the context it has access to
-- **this binding**: value of `this` keyword
+- **this binding**: value of this keyword
 
 ## 🧪 Call Stack
 
@@ -81,21 +100,21 @@ console.log(output);
 
 **1. Global EC is created:**
 - **Memory Phase:**
-  - `greet` → [function]
-  - `user` → undefined
-  - `output` → undefined
-  - `console` → [object]
+  - greet → [function]
+  - user → undefined
+  - output → undefined
+  - console → [object]
 
 **2. Code Execution Phase:**
-- `user` → "Vijay"
-- `output` → calls `greet("Vijay")`
+- user → "Vijay"
+- output → calls greet("Vijay")
 
 **3. New EC for greet() is created:**
 - **Memory:**
-  - `name` → "Vijay"
-  - `message` → undefined
+  - name → "Vijay"
+  - message → undefined
 - **Execution:**
-  - `message` → "Hello Vijay"
+  - message → "Hello Vijay"
   - Returns "Hello Vijay" → assigned to output
 
 **4. GEC logs "Hello Vijay"**
@@ -114,7 +133,7 @@ foo();
 console.log("end");
 ```
 
-**Output Order:** `start` → `inside foo` → `end`
+**Output Order:** start → inside foo → end
 
 ### Example 2:
 ```javascript
@@ -129,7 +148,7 @@ function outer() {
 outer();
 ```
 
-**Output Order:** `outer` → `inner`
+**Output Order:** outer → inner
 
 ## 🎯 Key Takeaways
 
@@ -139,3 +158,5 @@ outer();
 - Understanding EC is crucial for grasping hoisting, scope, and closures
 
 ---
+
+**Next Topic**: Hoisting + Temporal Dead Zone (TDZ)
