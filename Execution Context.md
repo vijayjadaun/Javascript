@@ -158,5 +158,3 @@ outer();
 - Understanding EC is crucial for grasping hoisting, scope, and closures
 
 ---
-
-**Next Topic**: Hoisting + Temporal Dead Zone (TDZ)
